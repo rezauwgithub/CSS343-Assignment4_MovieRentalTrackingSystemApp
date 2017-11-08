@@ -1,0 +1,35 @@
+CSS 343 Assignment 4 : Movie Rental Store
+Created: 11/05/2016
+Last Edited: 12/14/2016
+By: Reza Naeemi
+
+
+Notes:
+I worked alone (agreed upon with Min Chen) for the implementation 
+of this project and noted this in all of the files. Any assumptions 
+that I have made are listed in comments. Also in comments, are design 
+decisions and specific things to look out for. For example, my BSTree
+class is templatized, and therefore, I had some difficulty
+compiling it on Linux. After consulting the instructor and
+some online resources, I combined the .h and the .cpp into
+one .h file. This is sub-optimal but has been noted. In 
+the BSTree class, I even give a quote that state why it is
+best to keep templatized classes in the same .h file. Please
+see the quote (it is at the bottom). 
+
+
+Decisions:
+I made all the factories static so no objects had to be made.
+Transactions are performed as they are read so no transactions
+need to be stored (although, my original design DID store 
+transactions before performing them). History and Inventory
+transactions are NOT stored in any customer history. 
+
+
+Instructions:
+Nothing special was done to compile this code.
+All you need to do is un-zip the zip and make sure 
+all files are in the same directory. In linux, use
+g++ *.cpp and the code should compile just fine (it did for me).
+run the program using ./a.out. For memory leaks you can use the
+command valgrind --leak-check=yes ./a.out.
